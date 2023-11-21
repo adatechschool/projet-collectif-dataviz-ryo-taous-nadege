@@ -1,0 +1,75 @@
+body {
+  background-image: url(./pexels-ruvim-3560044.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-container {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.form-control {
+  border-radius: 10px;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  margin: 10px auto;
+}
+
+button {
+  border-radius: 10px;
+  outline: none;
+  background-color: rgba(15, 15, 36, 0.4);
+  color: whitesmoke;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  margin: 10px auto;
+}
+
+button:hover {
+  background-color: whitesmoke;
+  color: rgba(15, 15, 36, 0.4);
+}
+
+#box {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: rgb(241, 236, 236);
+}
+
+.city {
+  background-color: rgb(5, 135, 135, 0.4);
+}
+
+.temp {
+  background-color: rgb(116, 248, 204, 0.4);
+}
+
+.humidity {
+  background-color: rgb(89, 243, 243, 0.4);
+}
+
+.wind {
+  background-color: rgb(180, 179, 179, 0.4);
+}
