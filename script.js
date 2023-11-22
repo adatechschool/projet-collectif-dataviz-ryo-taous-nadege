@@ -1,5 +1,11 @@
 const APIKEY = "76d589c11f8de1e3e9b8dd346d698ce3";
 
+/*function celciusToFarenheit(celcius) {
+  const farenheit = (celcius * 9/5) + 32
+  return farenheit
+}*/
+
+
 let apiCall = function (city) {
   let urlLocation = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${APIKEY}&units=metric&lang=fr`;
 
@@ -14,30 +20,37 @@ let apiCall = function (city) {
 
           fetch(urlWeather).then((response) =>
             response.json().then((data) => {
+
+              /*add variable for data.main.temp to convert celcius into farenheit//
+              let celciusTemperature = data.main.temp*/
+              
               document.querySelector(".city").innerHTML = data.name;
+              
               document.querySelector(".temp").innerHTML =
-                '<i class="fa-solid fa-temperature-half"></i>' +
-                data.main.temp +
-                " °C";
+              '<i class="fa-solid fa-temperature-half"></i>' +
+              celciusTemperature + " °C";
+              
               document.querySelector(".humidity").innerHTML =
-                '<i class="fa-solid fa-droplet"></i>' +
-                data.main.humidity +
-                " %";
+              '<i class="fa-solid fa-droplet"></i>' +
+              data.main.humidity + " %";
+
               document.querySelector(".wind").innerHTML =
-                '<i class="fa-solid fa-wind"></i>' + data.wind.speed + " km/h";
+              '<i class="fa-solid fa-wind"></i>' + data.wind.speed + " km/h";
             })
-          );
-        }
-      })
-    )
-    .catch((err) => console.log("Erreur : " + err));
-};
+            );
+          }
+        })
+        )
+        .catch((err) => console.log("Erreur : " + err));
+      };
+              
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        let ville = document.getElementById("inputCity").value;
+      
+        apiCall(ville);
 
-document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  let ville = document.getElementById("inputCity").value;
+        
+      });
 
-  apiCall(ville);
-});
-
-apiCall("Paris");
+      apiCall("Paris");
