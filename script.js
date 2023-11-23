@@ -37,6 +37,38 @@ let apiCall = function (city) {
               '<i class="fa-solid fa-wind"></i>' + data.wind.speed + " km/h";
             document.querySelector(".description").innerHTML =
               data.weather[0].description;
+              const weather = data.weather[0].description;
+              console.log(weather);
+              let drawElement = document.querySelector(".draw");
+              switch (weather) {
+                case "ciel dégagé":
+                  console.log("Ciel dégagé condition reached");
+                  drawElement.classList.add("soleilIcon");
+                  break;
+                case "partiellement nuageux":
+                  console.log("partiellement nuageux condition reached");
+                case "peu nuageux":
+                  console.log("peu nuageux condition reached");
+                  drawElement.classList.add("eclairciesIcon");
+                  break;
+                case "couvert":
+                  console.log("couvert condition reached");
+                case "nuageux":
+                  console.log("nuageux condition reached");
+                  drawElement.classList.add("nuageuxIcon");
+                  break;
+                case "brume":
+                  console.log("brume condition reached");
+                  drawElement.classList.add("brumeIcon");
+                  break;
+                case "orage":
+                  console.log("orage condition reached");
+                  drawElement.classList.add("orageIcon");
+                  break;
+                default:
+                  drawElement.innerHTML = `Sorry, "${weather}" is too complicated to draw !`;
+                  break;
+              }
           })
         );
       }
