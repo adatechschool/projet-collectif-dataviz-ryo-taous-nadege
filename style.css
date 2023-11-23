@@ -75,6 +75,31 @@ button:hover {
   color: rgb(241, 236, 236);
 }
 
+.eclairciesIcon {
+  background-image: url(./eclaircies.png);
+  background-size: cover;
+}
+.nuageuxIcon {
+  background-image: url(./nuageux.png);
+  background-size: cover;
+}
+.soleilIcon {
+  background-image: url(./soleil.png);
+  background-size: cover;
+}
+.brumeIcon {
+  background-image: url(./brouillard.png);
+  background-size: cover;
+}
+.orageIcon {
+  background-image: url(./orage.png);
+  background-size: cover;
+}
+.pluieIcon {
+  background-image: url(./pluie.png);
+  background-size: cover;
+}
+
 .city {
   background-color: rgb(5, 135, 135, 0.4);
 }
