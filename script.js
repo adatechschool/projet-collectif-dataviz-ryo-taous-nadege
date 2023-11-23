@@ -1,4 +1,12 @@
 const APIKEY = "76d589c11f8de1e3e9b8dd346d698ce3";
+
+//function c to f 
+let isCelcius = true;
+function celciusToFarenheit(celcius) {
+  return (celcius * 9) / 5 + 32;
+}
+
+
 let apiCall = function (city) {
   let urlLocation = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${APIKEY}&units=metric&lang=fr`;
   fetch(urlLocation)
@@ -13,10 +21,14 @@ let apiCall = function (city) {
           response.json().then((data) => {
             console.log(data);
             document.querySelector(".city").innerHTML = data.name;
+            
             document.querySelector(".temp").innerHTML =
-              '<i class="fa-solid fa-temperature-half"></i>' +
-              data.main.temp +
-              " °C";
+  '<i class="fa-solid fa-temperature-half"></i>' +
+  (isCelcius
+    ? data.main.temp + " °C"
+    : celciusToFarenheit(data.main.temp).toFixed(2) + " °F");
+
+
             document.querySelector(".humidity").innerHTML =
               '<i class="fa-solid fa-droplet"></i>' +
               data.main.humidity +
@@ -37,17 +49,19 @@ let apiCall = function (city) {
     let ville = document.getElementById("inputCity").value;
     
     apiCall(ville);
-    
-    
   });
+    
+  document.getElementById("convert").addEventListener("click", function () {
+    isCelcius = !isCelcius
+    let ville = document.getElementById("inputCity").value;
+    apiCall(ville)
+  })
+  
+  
   
   apiCall("Paris");
             
-            
-              
-            
-      
-      
+             
       //ANIMATION PLUIE :
       
       //EN DERNIER : une fois que toute la logique fonctionne, la mettre dans une fonction globale :
@@ -77,11 +91,4 @@ let apiCall = function (city) {
 };
 
 //Se servir de l'asynchrone (setInterval) pour créer des gouttes toutes les x secondes :
-setInterval(rainMaker, 30);
-
-/*function celciusToFarenheit(celcius) {
-  /*add variable for data.main.temp to convert celcius into farenheit//
-    let celciusTemperature = data.main.temp*/
-  /*const farenheit = (celcius * 9/5) + 32
-  return farenheit
-}*/
+/*setInterval(rainMaker, 30);*/
