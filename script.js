@@ -14,6 +14,7 @@ let apiCall = function (city) {
 
           fetch(urlWeather).then((response) =>
             response.json().then((data) => {
+              console.log(data)
               document.querySelector(".city").innerHTML = data.name;
               document.querySelector(".temp").innerHTML =
                 '<i class="fa-solid fa-temperature-half"></i>' +
@@ -25,7 +26,9 @@ let apiCall = function (city) {
                 " %";
               document.querySelector(".wind").innerHTML =
                 '<i class="fa-solid fa-wind"></i>' + data.wind.speed + " km/h";
-            })
+                document.querySelector(".description").innerHTML =data.weather[0].description;
+              })
+                
           );
         }
       })
@@ -41,3 +44,23 @@ document.querySelector("form").addEventListener("submit", function (e) {
 });
 
 apiCall("Paris");
+
+  let date = new Date();
+// Obtenir le jour, le mois et l'année
+  let jours = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+  let jour = jours[date.getDay()];
+//console.log(jour)
+  let mois = date.getMonth() + 1; // Les mois sont indexés à partir de 0 en JavaScript
+//console.log(mois)
+  let annee = date.getFullYear();
+//console.log(annee)
+// Obtenir l'heure et les minutes
+  let heure = date.getHours();
+//console.log(heure)
+  let minute = date.getMinutes();
+
+// Assembler la date et l'heure dans le format souhaité
+  let dateEtHeure = '<strong style="font-size:2em;">' + jour + '</strong><br>' + date.getDate() + '/' + mois + '/' + annee + ' '+'<br>'+ heure + ':' + minute;
+
+// Afficher la date et l'heure
+  document.getElementById("current_date").innerHTML = dateEtHeure;
