@@ -3,6 +3,22 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
+  overflow: hidden;
+}
+
+/* ANIMATION DE LA PLUIE */
+.rain {
+  position: absolute;
+  background: rgba(47, 46, 85, 0.7);
+  opacity: 0.5;
+  animation: anim 4s;
+}
+
+@keyframes anim {
+  to {
+    top: 1000px;
+    opacity: 1;
+  }
 }
 
 .container {
@@ -22,7 +38,7 @@ body {
 }
 .box-container {
   width: 400px;
-  height: 400px;
+  height: 600px;
   display: flex;
   flex-wrap: wrap;
   padding: 30px;
@@ -63,8 +79,34 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-size: 1.5rem;
   color: rgb(241, 236, 236);
+}
+
+.eclairciesIcon {
+  background-image: url(./eclaircies.png);
+  background-size: cover;
+}
+.nuageuxIcon {
+  background-image: url(./nuageux.png);
+  background-size: cover;
+}
+.soleilIcon {
+  background-image: url(./soleil.png);
+  background-size: cover;
+}
+.brumeIcon {
+  background-image: url(./brouillard.png);
+  background-size: cover;
+}
+.orageIcon {
+  background-image: url(./orage.png);
+  background-size: cover;
+}
+.pluieIcon {
+  background-image: url(./pluie.png);
+  background-size: cover;
 }
 
 .city {
@@ -81,4 +123,8 @@ button:hover {
 
 .wind {
   background-color: rgb(180, 179, 179, 0.4);
+}
+
+.description {
+  background-color: rgba(142, 142, 240, 0.4);
 }
