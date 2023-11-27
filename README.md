@@ -28,4 +28,5 @@ Résolution du bug d'affichage d'icônes par Ryo, travail sur Git et ses conflit
 Recherche d'une API pour afficher des idées de sorties, sans succés... Décision d'afficher des idées de sorties en dur.
 
 ## Lundi 27 novembre
-Ryo est absent car malade. 
+Ryo est absent car malade. Avancement sur l'affichage dans la matinée : manipulation de la date, recherche des idées de sorties, modification du switch-case avec intégration des idées de sorties en dures.
+Tentative de l'intégration de l'animation pluie dans le switch-case mais pour l'instant, cela ne fonctionne pas.
