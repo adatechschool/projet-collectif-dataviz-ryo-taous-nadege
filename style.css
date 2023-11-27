@@ -27,6 +27,7 @@ body {
   width: 400px;
   display: flex;
   justify-content: center;
+  text-align: center;
   padding: 30px;
   margin: 0 auto;
   background-color: rgb(0, 174, 255, 0.3);
@@ -64,25 +65,20 @@ a:hover {
   margin: 0 auto;
 }
 
-.activity {
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  background-color: rgba(244, 217, 244, 0.5);
-  margin: 20px;
-  padding: 0 20px;
-}
 #gif {
-  display: block;
-  width: 45%;
+  width: 90%;
   border-radius: 20px;
   color: whitesmoke;
   text-align: center;
   padding: 20px;
-  margin: 10px;
+  margin: 20px auto;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  background-color: rgba(244, 217, 244, 0.5);
 }
 
 .giphy-embed {
   width: 100%;
-  padding: 20px;
+  padding: 20px 30px 20px 0;
 }
 
 .form-control {
@@ -190,6 +186,9 @@ button:hover {
     align-items: center;
     justify-items: center;
   }
+  #gif {
+    width: 50%;
+  }
 }
 
 /* Mobiles */
@@ -210,5 +209,9 @@ button:hover {
 @media (max-width: 500px) {
   #current_date {
     width: 80%;
+  }
+  .giphy-embed {
+    width: 100%;
+    padding: 0 30px 0 0;
   }
 }
