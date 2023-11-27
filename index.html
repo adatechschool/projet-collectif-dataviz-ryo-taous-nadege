@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div id="current_date"></div>
     <div class="container">
       <div class="row justify-content-center">
         <form action="">
@@ -21,8 +22,8 @@
               id="inputCity"
               placeholder="Entrer une ville"
             />
-          </div>
-
+          <div id="current_date"></div>
+        </div>
           <button type="submit" classe="btn-info btn-block">Rechercher</button>
           <br>
           <button id="convert">Convert C to F</button>
@@ -40,6 +41,28 @@
         </div>
       </div>
     </div>
+     <div class="boxe-container"></div>
+    <script>
+       let date = new Date();
+// Obtenir le jour, le mois et l'année
+  let jours = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+  let jour = jours[date.getDay()];
+//console.log(jour)
+  let mois = date.getMonth() + 1; // Les mois sont indexés à partir de 0 en JavaScript
+//console.log(mois)
+  let annee = date.getFullYear();
+//console.log(annee)
+// Obtenir l'heure et les minutes
+  let heure = date.getHours();
+//console.log(heure)
+  let minute = date.getMinutes();
+
+// Assembler la date et l'heure dans le format souhaité
+  let dateEtHeure = '<strong style="font-size:2em;">' + jour + '</strong><br>' + date.getDate() + '/' + mois + '/' + annee + ' '+'<br>'+ heure + ':' + minute;
+
+// Afficher la date et l'heure
+  document.getElementById("current_date").innerHTML = dateEtHeure;
+    </script>
     <script src="./script.js"></script>
   </body>
 </html>
