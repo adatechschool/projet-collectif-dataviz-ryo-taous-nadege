@@ -30,3 +30,4 @@ Recherche d'une API pour afficher des idées de sorties, sans succés... Décisi
 ## Lundi 27 novembre
 Ryo est absent car malade. Avancement sur l'affichage dans la matinée : manipulation de la date, recherche des idées de sorties, modification du switch-case avec intégration des idées de sorties en dures.
 Tentative de l'intégration de l'animation pluie dans le switch-case mais pour l'instant, cela ne fonctionne pas.
+Idée de Taous de rajouter des gifs à chaque météo différente. Implémentation de l'idée + ajout du CSS et des médias queries.
