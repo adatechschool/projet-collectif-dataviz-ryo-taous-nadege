@@ -22,3 +22,11 @@ Ryo : recherche de la formule mathématique et codé la fonction pour transforme
 Taous : recherche des API grtuites de sorties (propositions de sorties en fonction de la météo), malheureusement, il ne semble pas y en avoir.
 Nadège : code d'une boucle switch-case pour afficher un icône en fonction de la météo annoncée (couvert === icône de nuages) avec ajout de classe CSS pour les images. Bug.
 Entraide, partage des idées, problème de Git...
+
+## Jeudi 23 novembre 
+Résolution du bug d'affichage d'icônes par Ryo, travail sur Git et ses conflits ( >-<'), mise en place de la date du jour par Taous
+Recherche d'une API pour afficher des idées de sorties, sans succés... Décision d'afficher des idées de sorties en dur.
+
+## Lundi 27 novembre
+Ryo est absent car malade. Avancement sur l'affichage dans la matinée : manipulation de la date, recherche des idées de sorties, modification du switch-case avec intégration des idées de sorties en dures.
+Tentative de l'intégration de l'animation pluie dans le switch-case mais pour l'instant, cela ne fonctionne pas.
