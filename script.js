@@ -39,31 +39,61 @@ let apiCall = function (city) {
               const weather = data.weather[0].description;
 
               let drawElement = document.querySelector(".draw");
+              let activityElement = document.querySelector(".activity");
               drawElement.className = "draw";
+              activityElement.className = "activity";
+              console.log(activityElement);
               switch (weather) {
                 case "ciel dégagé":
                   drawElement.classList.add("soleilIcon");
+                  activityElement.innerHTML = `C'est une belle journée pour une une randonnée ou une sortie dans la nature !
+                  <iframe src="https://giphy.com/embed/3oxRmGNqKwCzJ0AwPC" width="300" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><a href="https://www.visorando.com/">Besoin d'idées ?</a>`;
                   break;
                 case "partiellement nuageux":
                 case "peu nuageux":
                   drawElement.classList.add("eclairciesIcon");
+                  activityElement.innerHTML = `Que diriez-vous d'aller prendre un verre en terrasse ou vous promener à vélo ? 
+                  <iframe src="https://giphy.com/embed/xT0GqrJNbZkRcr2Jgc" width="300" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><a href="https://www.routard.com/contenu-dossier/cid136660-velo-pistes-cyclables-en-france.html">A bicyclette...</a>`;
                   break;
                 case "couvert":
                 case "nuageux":
                   drawElement.classList.add("nuageuxIcon");
+                  activityElement.innerHTML = `C'est un bon moment pour parfaire votre culture ! 
+                  <iframe src="https://giphy.com/embed/fvxQJ3BUUuqU1E8IM3" width="300" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                  <a href="https://www.museemusee.com/les-musees-de-france-par-departement.html">Visitez un musée ou une galerie d'art</a>`;
                   break;
                 case "brume":
                   drawElement.classList.add("brumeIcon");
+                  activityElement.innerHTML = `Profitez-en pour organiser un cache-cache géant !
+                  <iframe src="https://giphy.com/embed/V1NxC1YoNEHBe" width="300" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>`;
                   break;
                 case "pluie":
                 case "légère pluie":
+                case "bruine légère":
+                case "pluie modérée":
                   drawElement.classList.add("pluieIcon");
+                  activityElement.innerHTML = `Une belle journée pour aller au cinéma ou faire du shopping ! 
+                  <iframe src="https://giphy.com/embed/EqjqXkrEb9XNEJam1A" width="300" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                  <a href="https://www.allocine.fr/">Salé ou sucré ?</a>`;
+                  // setInterval(rainMaker, 30);
                   break;
                 case "orage":
                   drawElement.classList.add("orageIcon");
+                  activityElement.innerHTML = `C’est le moment idéal pour se blottir sur le canapé avec un plaid et regarder ce film ou cette série que vous avez toujours voulu voir.
+                  <iframe src="https://giphy.com/embed/GNemRsUSi5Ti9ZPpBZ" width="300" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> 
+                  <a href="https://www.netflix.com/fr/">& Chill.</a>`;
+                  break;
+                case "légères chutes de neige":
+                case "neige":
+                case "fortes chutes de neige":
+                  drawElement.classList.add("neigeIcon");
+                  activityElement.innerHTML = `Sortez la luge !! 
+                  <iframe src="https://giphy.com/embed/Mn2RSnhSpW81M5qgqJ" width="300" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                  <a href="https://fr-fr.topographic-map.com/map-cz/France-m%C3%A9tropolitaine/">Trouvez le dénivelé le plus proche de chez vous !</a>`;
                   break;
                 default:
                   drawElement.innerHTML = `Sorry, "${weather}" is too complicated to draw !`;
+                  activityElement.innerHTML = `<iframe src="https://giphy.com/embed/l378giAZgxPw3eO52" width="300" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>`;
                   break;
               }
             })
@@ -117,4 +147,4 @@ const rainMaker = () => {
 };
 
 //Se servir de l'asynchrone (setInterval) pour créer des gouttes toutes les x secondes :
-/*setInterval(rainMaker, 30);*/
+// setInterval(rainMaker, 30);
