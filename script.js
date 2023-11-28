@@ -6,7 +6,7 @@ function celciusToFahrenheit(celcius) {
   return (celcius * 9) / 5 + 32;
 }
 
-async function apiCall(city) {
+function apiCall(city) {
   let urlLocation = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${APIKEY}&units=metric&lang=fr`;
 
   fetch(urlLocation)
