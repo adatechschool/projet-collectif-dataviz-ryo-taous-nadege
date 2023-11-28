@@ -57,6 +57,7 @@ function apiCall(city) {
                   activityElement.innerHTML = `Que diriez-vous d'aller prendre un verre en terrasse ou vous promener à vélo ? 
                   <iframe src="https://giphy.com/embed/xT0GqrJNbZkRcr2Jgc" width="300" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><a href="https://www.routard.com/contenu-dossier/cid136660-velo-pistes-cyclables-en-france.html">A bicyclette...</a>`;
                   break;
+                
                 case "couvert":
                 case "nuageux":
                   drawElement.classList.add("nuageuxIcon");
@@ -64,6 +65,7 @@ function apiCall(city) {
                   <iframe src="https://giphy.com/embed/fvxQJ3BUUuqU1E8IM3" width="300" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
                   <a href="https://www.museemusee.com/les-musees-de-france-par-departement.html">Visitez un musée ou une galerie d'art</a>`;
                   break;
+                  
                 case "brume":
                   drawElement.classList.add("brumeIcon");
                   activityElement.innerHTML = `Profitez-en pour organiser un cache-cache géant !
@@ -119,6 +121,29 @@ document.getElementById("convert").addEventListener("click", function () {
 });
 
 apiCall("Paris");
+//ANIMATION PLUIE :
+//EN DERNIER : une fois que toute la logique fonctionne, la mettre dans une fonction globale :
+/*const rainMaker = () => {
+  // CREATION D'ELEMENT EN JS (injecter une balise) : createElement :
+  const rain = document.createElement("span");
+  // Ajouter la classe crée en CSS pour lui donner le style voulu (add = ajouter, toggle =la mettre si elle n'y est pas, remove = retirer):
+  rain.classList.add("rain");
+  //Dire au body qu'il a un nouvel enfant :
+  document.body.appendChild(rain);
+  //Randomiser la taille des gouttes (entre 5 et 10px)
+  const size = Math.random() * 10 + 5 + "px";
+  rain.style.height = size;
+  rain.style.width = "1.5px";
+  //Randomiser son positionnement haut-bas :
+  rain.style.top = Math.random() * 100 - 90 + "%";
+  rain.style.left = Math.random() * 100 + "%";
+  //Supprimer les gouttes du DOM au bout de 3s :
+  setTimeout(() => {
+    rain.remove();
+  }, 3000);
+};
+//Se servir de l'asynchrone (setInterval) pour créer des gouttes toutes les x secondes :
+// setInterval(rainMaker, 30);
 
 //ANIMATION PLUIE :
 
@@ -149,4 +174,6 @@ const rainMaker = () => {
 };
 
 //Se servir de l'asynchrone (setInterval) pour créer des gouttes toutes les x secondes :
-//setInterval(rainMaker, 30);
+<<<<<<< HEAD
+// setInterval(rainMaker, 30);
+*/
