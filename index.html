@@ -8,14 +8,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div id="current_date"></div>
+    <div id="current_date" class="animate__animated animate__backInRight"></div>
 
     <div class="container">
       <div class="form-container">
-        <form action="">
+        <form action="" class="animate__animated animate__backInLeft">
           <div class="form-group">
             <input
               type="text"
@@ -24,15 +28,15 @@
               placeholder="Entrer une ville"
             />
           </div>
-          <button type="submit" classe="btn-info btn-block">Rechercher</button>
+          <button type="submit">Rechercher</button>
           <br />
-          <button id="convert">Convert C to F</button>
+          <button id="convert">Convert °C to °F</button>
         </form>
       </div>
 
       <div class="activity" id="gif"></div>
 
-      <div class="box-container">
+      <div class="box-container animate__animated animate__backInDown">
         <div class="city" id="box"></div>
         <div class="temp" id="box"></div>
         <div class="humidity" id="box"></div>

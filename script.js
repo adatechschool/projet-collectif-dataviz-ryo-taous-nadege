@@ -1,13 +1,14 @@
 const APIKEY = "76d589c11f8de1e3e9b8dd346d698ce3";
 
-//function c to f
+//function Celsius to Fahrenheit
 let isCelcius = true;
-function celciusToFarenheit(celcius) {
+function celciusToFahrenheit(celcius) {
   return (celcius * 9) / 5 + 32;
 }
 
-let apiCall = function (city) {
+async function apiCall(city) {
   let urlLocation = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${APIKEY}&units=metric&lang=fr`;
+
   fetch(urlLocation)
     .then((response) =>
       response.json().then((data) => {
@@ -18,14 +19,13 @@ let apiCall = function (city) {
 
           fetch(urlWeather).then((response) =>
             response.json().then((data) => {
-              console.log(data);
               document.querySelector(".city").innerHTML = data.name;
 
               document.querySelector(".temp").innerHTML =
                 '<i class="fa-solid fa-temperature-half"></i>' +
                 (isCelcius
                   ? data.main.temp + " °C"
-                  : celciusToFarenheit(data.main.temp).toFixed(2) + " °F");
+                  : celciusToFahrenheit(data.main.temp).toFixed(2) + " °F");
 
               document.querySelector(".humidity").innerHTML =
                 '<i class="fa-solid fa-droplet"></i>' +
@@ -35,14 +35,16 @@ let apiCall = function (city) {
                 '<i class="fa-solid fa-wind"></i>' + data.wind.speed + " km/h";
               document.querySelector(".description").innerHTML =
                 data.weather[0].description;
+              console.log(data.weather);
 
-              const weather = data.weather[0].description;
+              let weather = data.weather[0].description;
 
               let drawElement = document.querySelector(".draw");
               let activityElement = document.querySelector(".activity");
               drawElement.className = "draw";
               activityElement.className = "activity";
               console.log(activityElement);
+
               switch (weather) {
                 case "ciel dégagé":
                   drawElement.classList.add("soleilIcon");
@@ -71,11 +73,11 @@ let apiCall = function (city) {
                 case "légère pluie":
                 case "bruine légère":
                 case "pluie modérée":
+                  setInterval(rainMaker, 30);
                   drawElement.classList.add("pluieIcon");
                   activityElement.innerHTML = `Une belle journée pour aller au cinéma ou faire du shopping ! 
                   <iframe src="https://giphy.com/embed/EqjqXkrEb9XNEJam1A" width="300" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
                   <a href="https://www.allocine.fr/">Salé ou sucré ?</a>`;
-                  // setInterval(rainMaker, 30);
                   break;
                 case "orage":
                   drawElement.classList.add("orageIcon");
@@ -102,7 +104,7 @@ let apiCall = function (city) {
       })
     )
     .catch((err) => console.log("Erreur : " + err));
-};
+}
 document.querySelector("form").addEventListener("submit", function (e) {
   e.preventDefault();
   let ville = document.getElementById("inputCity").value;
@@ -147,4 +149,4 @@ const rainMaker = () => {
 };
 
 //Se servir de l'asynchrone (setInterval) pour créer des gouttes toutes les x secondes :
-// setInterval(rainMaker, 30);
+//setInterval(rainMaker, 30);
