@@ -37,3 +37,6 @@ Ryo est toujours absent et bien malade. Taous a l'idée de faire bouger des nuag
 On résoud le problème de l'animation de pluie qui fonctionne maintenant lorsque la météo est annoncée sur "pluie".
 Modification du CSS et petites animations des blocs lors du chargement de la page, ainsi que modifications du style.
 Code de l'animation nuages par Taous et implémentation dans notre code en mob-programming.
+
+## Mercredi 29 novembre
+Ryo est toujours malade. L'après-midi est consacré à la finalisation du projet : point avec Ryo sur Slack pour échanger les dernières idées et parler des derniers bugs (notamment affichage de l'écran en CSS et fonction de la pluie). Puis, sur les conseils de Laïla, changement du fetch.then en async-await pour un code plus prore et moins indenté. Push sur Git à 16h10 !
