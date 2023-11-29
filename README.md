@@ -31,3 +31,9 @@ Recherche d'une API pour afficher des idées de sorties, sans succés... Décisi
 Ryo est absent car malade. Avancement sur l'affichage dans la matinée : manipulation de la date, recherche des idées de sorties, modification du switch-case avec intégration des idées de sorties en dures.
 Tentative de l'intégration de l'animation pluie dans le switch-case mais pour l'instant, cela ne fonctionne pas.
 Idée de Taous de rajouter des gifs à chaque météo différente. Implémentation de l'idée + ajout du CSS et des médias queries.
+
+## Mardi 28 novembre
+Ryo est toujours absent et bien malade. Taous a l'idée de faire bouger des nuages à l'arrière plan.
+On résoud le problème de l'animation de pluie qui fonctionne maintenant lorsque la météo est annoncée sur "pluie".
+Modification du CSS et petites animations des blocs lors du chargement de la page, ainsi que modifications du style.
+Code de l'animation nuages par Taous et implémentation dans notre code en mob-programming.
