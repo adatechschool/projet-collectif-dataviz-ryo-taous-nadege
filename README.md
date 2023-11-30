@@ -25,7 +25,7 @@ Entraide, partage des idées, problème de Git...
 
 ## Jeudi 23 novembre 
 Résolution du bug d'affichage d'icônes par Ryo, travail sur Git et ses conflits ( >-<'), mise en place de la date du jour par Taous
-Recherche d'une API pour afficher des idées de sorties, sans succés... Décision d'afficher des idées de sorties en dur.
+(Recherche d'une API pour afficher des idées de sorties, toujours sans succés...) => Décision d'afficher des idées de sorties en dur.
 
 ## Lundi 27 novembre
 Ryo est absent car malade. Avancement sur l'affichage dans la matinée : manipulation de la date, recherche des idées de sorties, modification du switch-case avec intégration des idées de sorties en dures.
