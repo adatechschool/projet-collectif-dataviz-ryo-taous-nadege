@@ -1,5 +1,12 @@
+# DATAVIZ
+## Application météo & Activités
+
+Construction d'un site qui donne la météo avec l'utilisation de deux API (Open Weather) : géolocalisation & météo.
+Traitement et affichage des données en JavaScript (Icônes et propositions d'activités en fonction du temps qu'il fait)
+
+
 # Projet Dataviz - Journal de bord
-projet-collectif-dataviz-ryo-taous-nadege created by GitHub Classroom
+Created by GitHub Classroom
 
 ## Lundi 20 novembre - Jour 1
 Recherche d'une idée de projet : suivi de tutos, consultation des ressources, discussions, brain storming, points forts et points faibles de chacun
