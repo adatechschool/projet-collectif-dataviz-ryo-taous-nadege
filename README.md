@@ -4,6 +4,7 @@
 Construction d'un site qui donne la météo avec l'utilisation de deux API (Open Weather) : géolocalisation & météo.
 Traitement et affichage des données en JavaScript (Icônes et propositions d'activités en fonction du temps qu'il fait)
 
+Voir la vidéo de démo ==> https://vimeo.com/908601904?share=copy
 
 # Projet Dataviz - Journal de bord
 Created by GitHub Classroom
