@@ -6,6 +6,7 @@ function celciusToFahrenheit(celcius) {
   return (celcius * 9) / 5 + 32;
 }
 
+// Fonction async-await qui gère tout le programme
 async function apiCall(city) {
   let urlLocation = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${APIKEY}&units=metric&lang=fr`;
 
@@ -23,8 +24,6 @@ async function apiCall(city) {
       let responseWeather = await fetch(urlWeather);
       let dataWeather = await responseWeather.json();
 
-      console.log(dataWeather);
-
       document.querySelector(".city").innerHTML = dataWeather.name;
 
       document.querySelector(".temp").innerHTML =
@@ -41,10 +40,8 @@ async function apiCall(city) {
         '<i class="fa-solid fa-wind"></i>' + dataWeather.wind.speed + " km/h";
       document.querySelector(".description").innerHTML =
         dataWeather.weather[0].description;
-      console.log(data.weather);
 
       let weather = dataWeather.weather[0].description;
-
       let drawElement = document.querySelector(".draw");
       let activityElement = document.querySelector(".activity");
       drawElement.className = "draw";
@@ -74,6 +71,7 @@ async function apiCall(city) {
 
         case "brume":
         case "brouillard":
+        case "brume sèche":
           drawElement.classList.add("brumeIcon");
           activityElement.innerHTML = `Profitez-en pour organiser un cache-cache géant !
                   <iframe src="https://giphy.com/embed/V1NxC1YoNEHBe" width="300" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>`;

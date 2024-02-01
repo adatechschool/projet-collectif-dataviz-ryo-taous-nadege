@@ -2,6 +2,8 @@ body {
   min-height: 100vh;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
+
+/* ANIMATION DES NUAGES EN FOND */
 #cloud {
   z-index: -1;
   position: absolute;
@@ -53,17 +55,16 @@ body {
   position: absolute;
   left: -400px;
   top: 2.8em;
-
   animation: moveCloud 100s ease-out infinite;
   -webkit-animation: moveCloud 100s ease-out infinite;
   -moz-animation: moveCloud 100s ease-out infinite;
 }
+
 #nuage4 {
   z-index: 2;
   position: absolute;
   left: -600px;
   top: 0.5em;
-
   animation-delay: 8s;
   -webkit-animation-delay: 8s;
   -moz-animation-delay: 8s;
@@ -71,12 +72,12 @@ body {
   -webkit-animation: moveCloud 90s ease-in-out infinite;
   -moz-animation: moveCloud 90s ease-in-out infinite;
 }
+
 #nuage5 {
   z-index: 1;
   position: absolute;
   left: -800px;
   top: 2em;
-
   animation-delay: 7s;
   -webkit-animation-delay: 7s;
   -moz-animation-delay: 7s;
@@ -84,12 +85,12 @@ body {
   -webkit-animation: moveCloud 110s ease-out infinite;
   -moz-animation: moveCloud 110s ease-out infinite;
 }
+
 #nuage6 {
   z-index: 2;
   position: absolute;
   left: -1000px;
   bottom: 20em;
-
   animation-delay: 7s;
   -webkit-animation-delay: 7s;
   -moz-animation-delay: 7s;
@@ -97,6 +98,7 @@ body {
   -webkit-animation: moveCloud 110s linear infinite;
   -moz-animation: moveCloud 110s linear infinite;
 }
+
 @keyframes moveCloud {
   0% {
     transform: translate(2100px);
@@ -105,6 +107,7 @@ body {
     transform: translate(-1600px);
   }
 }
+
 @-webkit-keyframes moveCloud {
   0% {
     transform: translate(2100px);
@@ -113,6 +116,7 @@ body {
     transform: translate(-1600px);
   }
 }
+
 @-moz-keyframes moveCloud {
   0% {
     transform: translate(2100px);
@@ -121,6 +125,7 @@ body {
     transform: translate(-1600px);
   }
 }
+
 /* ANIMATION DE LA PLUIE */
 .rain {
   position: absolute;
@@ -136,6 +141,7 @@ body {
   }
 }
 
+/* CSS DATE */
 #current_date {
   border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 20px;
@@ -154,6 +160,8 @@ body {
     rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
+
+/* CSS BLOCS BOUTONS-ACTIVITES-METEO */
 .container {
   display: grid;
   grid-template-columns: 25% 25% 50%;
@@ -162,6 +170,7 @@ body {
   justify-content: center;
 }
 
+/* LIENS - VISITES & SURVOLS */
 a,
 a:visited {
   color: wheat;
@@ -176,6 +185,7 @@ a:hover {
   color: rgb(2, 72, 72);
 }
 
+/* CONTAINER METEO */
 .box-container {
   width: 600px;
   height: 400px;
@@ -185,6 +195,7 @@ a:hover {
   margin: 0 auto;
 }
 
+/* CONTAINER ACTIVITES */
 #gif {
   width: 90%;
   border-radius: 20px;
@@ -201,11 +212,13 @@ a:hover {
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
+/* TAILLE DU GIF */
 .giphy-embed {
   width: 100%;
   padding: 20px 30px 20px 0;
 }
 
+/* INPUT */
 .form-control {
   border-radius: 10px;
   outline: none;
@@ -216,12 +229,14 @@ a:hover {
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
+/* CONTAINER BOUTON + INPUT */
 .form-container {
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
+/* BOUTONS ET SURVOL */
 button {
   border-radius: 10px;
   outline: none;
@@ -241,6 +256,7 @@ button:hover {
   color: rgba(15, 15, 36, 0.4);
 }
 
+/* BOX INDIVIDUELLE METEO */
 #box {
   border-radius: 20px;
   width: 200px;
@@ -259,35 +275,37 @@ button:hover {
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
+/* CLASSES INTEGREES EN JS */
 .eclairciesIcon {
-  background-image: url(./eclaircies.png);
+  background-image: url(./img/eclaircies.png);
   background-size: cover;
 }
 .nuageuxIcon {
-  background-image: url(./nuageux.png);
+  background-image: url(./img/nuageux.png);
   background-size: cover;
 }
 .soleilIcon {
-  background-image: url(./soleil.png);
+  background-image: url(./img/soleil.png);
   background-size: cover;
 }
 .brumeIcon {
-  background-image: url(./brouillard.png);
+  background-image: url(./img/brouillard.png);
   background-size: cover;
 }
 .orageIcon {
-  background-image: url(./orage.png);
+  background-image: url(./img/orage.png);
   background-size: cover;
 }
 .pluieIcon {
-  background-image: url(./pluie.png);
+  background-image: url(./img/pluie.png);
   background-size: cover;
 }
 .neigeIcon {
-  background-image: url(./neige.png);
+  background-image: url(./img/neige.png);
   background-size: cover;
 }
 
+/* COULEUR DES BOXS INDIVIDUELLES */
 .city {
   background-color: rgb(5, 135, 135, 0.4);
 }
@@ -310,7 +328,7 @@ button:hover {
 
 /********** MEDIA QUERIES ***************/
 
-/* Tablette */
+/* Petit desktop */
 @media (max-width: 1300px) {
   .container {
     display: flex;
@@ -323,7 +341,7 @@ button:hover {
   }
 }
 
-/* Mobiles */
+/* Tablettes */
 @media (max-width: 700px) {
   .box-container {
     display: flex;
@@ -338,6 +356,7 @@ button:hover {
   }
 }
 
+/* Mobiles */
 @media (max-width: 500px) {
   #current_date {
     width: 80%;
