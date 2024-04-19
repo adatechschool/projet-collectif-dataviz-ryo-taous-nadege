@@ -39,20 +39,17 @@ Taous : mise en place de la date du jour
 (Recherche d'une API pour afficher des idées de sorties, toujours sans succés...) => Décision d'afficher des idées de sorties en dur.
 
 ## Lundi 27 novembre - jour 5
-Ryo est absent car malade. 
 Avancement sur l'affichage dans la matinée : manipulation de la date, recherche des idées de sorties, modification du switch-case avec intégration des idées de sorties en dures.
 Tentative de l'intégration de l'animation pluie dans le switch-case mais pour l'instant => bug.
 Idée de Taous : rajouter des gifs à chaque météo différente. 
 Implémentation de l'idée + ajout du CSS et des médias queries (site responsive).
 
 ## Mardi 28 novembre - jour 6
-Ryo est toujours absent et bien malade. 
 Idée de Taous : faire bouger des nuages en arrière-plan.
 Résolution du problème de l'animation de pluie avec Stéphane.
 Modification du CSS et petites animations des blocs lors du chargement de la page à l'aide la bibliothèque CSS "Animate", ainsi que modification du style des blocs.
 Code de l'animation nuages par Taous et implémentation dans notre code en mob-programming.
 
 ## Mercredi 29 novembre - jour 7
-Ryo est toujours malade. 
 L'après-midi est consacré à la finalisation du projet : point avec Ryo sur Slack pour échanger les dernières idées et parler des derniers bugs (notamment affichage de l'écran en CSS et fonction de la pluie). 
 Sur les conseils de Laïla, changement des nombreux ".then" en async-await pour un code plus prore et moins indenté. Push sur Git à 16h10 !
